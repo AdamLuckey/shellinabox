@@ -127,12 +127,21 @@
             if (getQueryVariable("u")){
               setTimeout(function(){
                 enterWord(getQueryVariable("u"))
+                
                 if (getQueryVariable("p")){
                   setTimeout(function(){
                       enterWord(getQueryVariable("p"));
                       window.autologinpassword="";
                   },getQueryVariable("d") || 2000);
                 }
+
+                if (getQueryVariable("s")){
+                  setTimeout(function(){
+                      enterWord(getQueryVariable("s"));
+                  },getQueryVariable("d") || 2000);
+                }
+
+
               }, 2000);
             }
           }
